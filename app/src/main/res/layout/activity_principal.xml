@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.example.isaquearaujo.trigonometrycalculator.Principal">
+<Button
+    android:id="@+id/openmenu"
+    android:background="@drawable/menu"
+    android:layout_width="30dp"
+    android:layout_height="35dp"/>
+<android.support.v4.widget.DrawerLayout  android:id="@+id/drawer_layout"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fitsSystemWindows="true" tools:openDrawer="start">
+    <com.example.isaquearaujo.trigonometrycalculator.NonSwipeableViewPager
+        android:id="@+id/viewpagerprincipal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.example.isaquearaujo.trigonometrycalculator.NonSwipeableViewPager>
+    <RelativeLayout
+        android:id="@+id/drawerPane"
+        android:layout_gravity="start" android:fitsSystemWindows="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <RelativeLayout
+                android:layout_weight="0.92"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="1.0">
+                    <LinearLayout
+                        android:background="#00bbbb"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".31">
+                        <RelativeLayout
+                            android:background="#00bbbb"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/logo"
+                                android:src="@drawable/logogif"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".69">
+                        <ListView
+                            android:background="#ffffff"
+                            android:id="@+id/navList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/profileBox"
+                            android:choiceMode="singleChoice"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>
+</RelativeLayout>
+
